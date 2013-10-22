@@ -1,0 +1,14 @@
+<!-- Airports is an array that consists out of Hashes.
+In order to get the right airport Hash the ID that is pulled out of the params Hash defines the INDEX within the airport Hash
+ -->
+<% airport_id = params[:id].to_i%>
+
+<!--The actual Code for the specific Airprot is pulled out of the Hash that correspnds to the Index number that equals the ID number generated out of the params of the URL.  -->
+<% airport_code = @airports[airport_id][:code] %>
+<% city_name = @airports[airport_id][:city_name] %>
+
+<h1><%=city_name%></h1>
+<h2>Local Information about <%=city_name%>:</h2>
+
+
+

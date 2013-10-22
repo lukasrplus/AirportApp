@@ -1,0 +1,28 @@
+<% @airports.each do |airport_hash| %>
+<a href="/details?id=<%= airport_hash[:id]%>"><h1><%=airport_hash[:code]%></h1></a>
+<% airport = Airport.new %>
+<% airport.code = airport_hash[:code]  %>
+<p>Temperature: <%= airport.temperature %></p>
+<% current_delay = airport.delay %>
+<% if current_delay < 15 %>
+  <p>ON TIME</p>
+  <% elsif current_delay < 30%>
+  <p>DELAYED</p>
+  <% else%>
+  <p>NIGHTMARE</p>
+  <% end %>
+
+
+
+
+
+
+<% end %>
+
+
+
+
+
+
+
+
