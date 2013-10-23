@@ -25,4 +25,8 @@ class Airport
     return current_temp.to_i
   end
 
+  def wind
+    return get_airport_wind(@my_airport_code)
+  end
+
 end

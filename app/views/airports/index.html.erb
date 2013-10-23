@@ -3,6 +3,7 @@
 <% airport = Airport.new %>
 <% airport.code = airport_hash[:code]  %>
 <p>Temperature: <%= airport.temperature %></p>
+<p>Current Wind Status: <%= airport.wind %></p>
 <% current_delay = airport.delay %>
 <% if current_delay < 15 %>
   <p>ON TIME</p>
